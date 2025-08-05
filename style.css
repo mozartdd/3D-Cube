@@ -39,11 +39,8 @@ header .sub-heading {
   width: var(--cube-width);
   height: var(--cube-width);
   transform-style: preserve-3d;
-  transition: transform 100000s;
-}
-
-.cube:hover {
-  transform: rotateY(-10000000deg) rotateX(-10000000deg);
+  animation: 10s rotation infinite normal linear;
+  /* transform: rotateX(220deg); */
 }
 
 .cube-container .side {
@@ -52,7 +49,6 @@ header .sub-heading {
   position: absolute;
   font-size: 3rem;
   font-weight: bold;
-  /* background-color: pink; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -99,4 +95,13 @@ header .sub-heading {
 
   background-color: #ffd166;
   transform: rotateY(90deg) translateZ(var(--translateZ));
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
 }
