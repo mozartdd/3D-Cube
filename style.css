@@ -39,8 +39,7 @@ header .sub-heading {
   width: var(--cube-width);
   height: var(--cube-width);
   transform-style: preserve-3d;
-  animation: 10s rotation infinite normal linear;
-  /* transform: rotateX(220deg); */
+  animation: 20s rotation infinite normal linear;
 }
 
 .cube-container .side {
@@ -99,9 +98,12 @@ header .sub-heading {
 
 @keyframes rotation {
   0% {
-    transform: rotateX(0deg) rotateY(0deg);
+    transform: rotateX(0deg) rotateY(0deg) translateY(-120px);
+  }
+  50% {
+    transform: rotateX(180deg) rotateY(180deg) translateY(250px);
   }
   100% {
-    transform: rotateX(360deg) rotateY(360deg);
+    transform: rotateX(360deg) rotateY(360deg) translateY(-120px);
   }
 }
